@@ -1,0 +1,43 @@
+!
+h1
+h1+h2
+h1+h2+p*3
+h1{Hello}+p{World}
+p{hello}*10
+ul>li{hello}*5
+* 이렇게 구현하면 안됨
+section>h2{hello}+p>sapn{hello}+p{hello world}
+* 이렇게 구현해야함
+section>h2{hello}+p>sapn{hello}^p{hello world}  
+
+table>(tr>td{hello}*3)+(tr>td{world}*3)
+
+* 제가 선호하는 방식은 구룹핑입니다. 클라임업 방식을 잘 사용하진 않습니다.
+1. table>thead+tbody
+2. table>(thead)+(tbody)
+3. table>(thead>tr)+(tbody>(tr)*2)
+4. table>(thead>tr>th{hello}*3)+(tbody>(tr>td{world}*3)*2)
+
+* 이렇게 사용하지 않습니다.
+h1+h2+h3+h4+h5+h6
+
+* 이렇게 사용합니다.
+h$*6
+h${hello}*6
+
+* 아니? 잘 사용되지 않을 것 같은데요? => 클래스나 아이디를 사용할 때 많이 사용합니다.
+
+div.one.two
+div#one.two.three
+
+* div는 있으나 없으나 같습니다.
+div.image$*3
+.image$*3
+
+div.image$$$*3
+div.image$$*5
+
+<table>
+    <thead></thead>
+    <tbody></tbody>
+</table>

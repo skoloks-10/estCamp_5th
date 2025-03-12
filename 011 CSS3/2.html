@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <style>
+    html {
+        font-size: 10px;
+      }
+      .parent {
+        font-size: 20px;
+      }
+      .em-child {
+        font-size: 1.5em; /* 부모의 20px * 1.5 = 30px */
+      }
+      .rem-child {
+        font-size: 1.5rem; /* 루트의 16px * 1.5 = 24px */
+      }
+  </style>
+  <body>
+    <div class="parent">
+        부모 텍스트
+        <div class="em-child">em으로 크기가 지정된 자식</div>
+        <div class="rem-child">rem으로 크기가 지정된 자식</div>
+      </div>
+  </body>
+</html>

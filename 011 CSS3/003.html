@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: #f0f0f0;
+            border: 1px solid #000;
+            padding: 10px;
+          }
+
+          .parent {
+            width: 300px;
+            background-color: #e0e0e0;
+            padding: 10px;
+          }
+          .child {
+            width: 50%;
+            background-color: #b0b0b0;
+            padding: 10px;
+          }
+
+          .viewport-box {
+            width: 50vw;
+            height: 30vh;
+            background-color: #d0d0d0;
+            border: 1px solid #000;
+            padding: 10px;
+          }
+
+          div {
+            background-color: cornflowerblue;
+            width: 50vmin;
+          }
+
+          div {
+            background-color: cornflowerblue;
+            width: 50vmax;
+          }
+          html {
+            font-size: 16px;
+          }
+          .parent {
+            font-size: 20px;
+          }
+          .em-child {
+            font-size: 1.5em; /* 부모의 20px * 1.5 = 30px */
+          }
+          .rem-child {
+            font-size: 1.5rem; /* 루트의 16px * 1.5 = 24px */
+          }
+    </style>
+  </head>
+  <body>
+    <div class="box">이 상자의 크기는 픽셀로 지정되었습니다.</div>
+
+    <div class="parent">
+        <div class="child">이 요소의 너비는 부모 너비의 50%입니다.</div>
+    </div>
+
+    <div class="viewport-box">
+        이 상자는 너비는 뷰포트의 50%, 높이는 뷰포트는 30%입니다.
+    </div>
+
+    <div>
+      <strong>div width: 50vmin;</strong>
+      <br />
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium animi
+      saepe magnam dolores vel, quis impedit? Ea alias repellendus eius voluptatum.
+      Debitis incidunt autem esse perspiciatis culpa natus, nisi voluptatum!
+    </div>
+
+    <div>
+      <strong>div width: 50vmax;</strong>
+      <br />
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium animi
+      saepe magnam dolores vel, quis impedit? Ea alias repellendus eius voluptatum.
+      Debitis incidunt autem esse perspiciatis culpa natus, nisi voluptatum!
+    </div>
+<br/>
+    <div class="parent">
+      부모 텍스트
+      <div class="em-child">em으로 크기가 지정된 자식</div>
+      <div class="rem-child">rem으로 크기가 지정된 자식</div>
+    </div>
+  </body>
+</html>

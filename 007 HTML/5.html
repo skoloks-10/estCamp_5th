@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+          }
+    </style>
+  </head>
+  <body>
+    <header>
+        <h2>로그인 또는 회원가입</h2>
+        <button>
+            <img src="/오르미 fe 5/image/close.png" alt=""/>
+            <span class="sr-only">닫기</span>
+        </button>
+    </header>
+    <section>
+        <h3 class="sr-only">로그인</h3>
+        <p>위니브에서 여러분의 궁금증을 해결하세요! :)</p>
+        <form>
+            <input type="text" placeholder="아이디" name="id"/>
+            <input type="password" placeholder="비밀번호" name="pw"/>
+            <input type="checkbox"id=check name="keep">
+            <img src="/오르미 fe 5/image/check-box.png" alt=""/>
+            <label for="check">로그인 상태유지</label>
+            <ul>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">아이디/비밀번호 찾기</a></li>                
+            </ul>
+            <span>또는</span>
+            <section>
+                <h3 class="sr-only">소셜로그인</h3>
+                <ul>
+                    <li><a href="#" target="blank"><img src="/오르미 fe 5/image/Google__G__Logo 1.png" alt="">구글 계정으로 로그인</a></li>
+                    <li><a href="#" target="blank"><img src="/오르미 fe 5/image/facebook.png" alt="">페이스북 계정으로 로그인</a></li>
+                    <li><a href="#" target="blank"><img src="/오르미 fe 5/image/naver-logo.png" alt="">네이버 계정으로 로그인</a></li>
+                    <li><a href="#" target="blank"><img src="/오르미 fe 5/image/message-circle.png" alt="">카카오 계정으로 로그인</a></li>
+                </ul>
+            </section>
+        </form>
+    </section>
+  </body>
+</html>

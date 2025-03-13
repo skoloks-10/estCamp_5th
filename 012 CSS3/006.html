@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+        .clip-container {
+            display: flex;
+            gap: 20px;
+          }
+           
+          .box {
+            width: 200px;
+            height: 200px;
+            border: 15px dashed #333;
+            padding: 20px;
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+          }
+           
+          .border-box {
+            background-clip: border-box;
+            background-origin: content-box;
+          }
+           
+          .padding-box {
+            background-clip: padding-box;
+          }
+           
+          .content-box {
+            background-clip: content-box;
+            background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, 
+rgba(9,9,121,0.568445475638051) 36%, rgba(0,212,255,1) 100%);
+            
+          }
+          div.border-box{
+            background-image: url(./image.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+    </style>
+</head>
+  <body>
+    <h2>Background Clip</h2>
+<div class="clip-container">
+  <div class="box border-box">border-box</div>
+  <div class="box padding-box">padding-box</div>
+  <div class="box content-box">content-box</div>
+</div>
+  </body>
+</html>

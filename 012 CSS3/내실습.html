@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+        div{
+            color:white;
+            display: flex;
+        }
+        
+        div>p.fir{
+            
+            width: 200px;
+            height: 100px;
+            background-color: rgb(31, 39, 65);
+            border: 10px solid #000000;
+            margin:20px;
+            text-align: center;
+            line-height: 100px;
+            box-shadow: inset 10px 10px rgba(112, 98, 98, 0.3);
+            background-clip: padding-box;
+        }
+        div>p.sec{
+            width: 200px;
+            height: 100px;
+            background: rgb(2,0,36);
+background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(167,167,255,1) 100%);
+            border: 5px solid #745579;
+            border-style: dashed;
+            margin:20px;
+            text-align: center;
+            line-height: 100px;
+            border-radius: 50px 50px;
+            background-clip: content-box;
+        }
+        div>p.thr{
+            width: 200px;
+            height: 100px;
+            color:black;
+            border: 5px solid gray;
+            margin:20px;
+            text-align: center;
+            line-height: 100px;
+            border-radius: 0 50px 50px 50px;
+            background-clip: border-box;
+        }
+    </style>
+    </head>
+  <body>
+    <div>
+        <div>
+            <p class="fir">hello😁</p>
+        </div>
+        <p class="sec">hello😁</p>
+        <p class="thr">hello😁</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      margin: 100px;
+      padding: 0;
+    }
+    #wrap{
+      overflow: hidden;;
+      border: 1px solid #ccc;
+      margin-top: 20px;
+    }
+    header{
+      background-color: lightgray;
+      padding: 20px;
+      text-align: center;
+    }
+    aside{
+      float:left;
+      width:30%;
+      background-color:lightblue;
+      padding: 20px;
+      box-sizing: border-box;
+      height: 400px;
+      
+    }
+    main{
+      float:left;
+      width:70%;
+      background-color:lightyellow;
+      padding:20px;
+      box-sizing: border-box;
+      height:400px;
+      
+    }
+    .box1{
+      float:left;
+      width:30%;
+      margin:5px;
+      background-color:lightgreen;
+      text-align: center;
+      line-height: 100px;
+    }
+    .box2{
+      float:left;
+      width:30%;
+      margin:5px;
+      background-color:lightcoral;
+      text-align: center;
+      line-height: 100px;
+    }
+    .box3{
+      float:left;
+      width:30%;
+      background-color:lightpink;
+      margin:5px;
+      text-align: center;
+      line-height: 100px;
+    }
+    .clear{
+      clear:both;
+    }
+    footer{
+      background-color: lightgray;
+      padding: 20px;
+      text-align: center;
+    }
+
+
+  </style>
+  <script></script>
+</head>
+<body>
+  <header>
+    <h1>Float 레이아웃 연습</h1>
+    <p>웹 페이지 레이아웃에서 float 속성을 활용하는 방법을 배워봅시다.</p>
+  </header>
+  <div id="wrap">
+  <aside>
+    <h2>사이드바</h2>
+    <p>이 영역은 왼쪽에 float 되었습니다.</p>
+    <p>width:30%로 설정되어 있습니다.</p>
+  </aside>
+  <main>
+    <h2>메인 콘텐츠</h2>
+    <p>이 영역은 왼쪽에 float 되었습니다.</p>
+    <p>width:70%로 설정되어 있습니다.</p>
+    
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+    <div class="box3">박스3</div>
+    <div class="clear">
+    </div>
+    <p>위의 박스들은 float:left로 설정되었고, clearfix를 사용하여 float를 해제했습니다.</p>
+    
+  </div>
+  
+  </main>
+  </div>
+  <div class="clear"></div>
+  <footer>
+    <p>푸터 영역 - clear:both를 사용하여 float를 해제했습니다.</p>
+  </footer>
+</body>
+</html>

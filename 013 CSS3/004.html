@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+        .container {
+            border: 2px solid #333;
+            padding: 10px;
+            height:200px;
+          }
+        .box{
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #000;
+        }
+        .float-left{
+            float: left;
+        }
+        .float-right{
+            float: right;
+        }
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+          }
+    </style>
+  </head>
+  <body>
+    <div class="container clearfix">
+        <div class="box float-left">Left Float</div>
+        <div class="box float-right">Right Float</div>
+        <p>
+          This is some text that will wrap around the floated elements. Notice how the
+          text flows around the boxes. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia similique culpa at natus sed cupiditate, soluta distinctio quae velit reiciendis suscipit dicta eos placeat, recusandae officiis ab aliquid debitis laborum.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque veritatis magni, debitis, placeat temporibus consectetur soluta, iusto expedita quidem nobis nam mollitia sapiente distinctio ullam? Ipsa voluptatum quidem illo velit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nemo sit consequuntur tenetur ad, placeat, facilis ullam, exercitationem odit temporibus quae provident labore fugit nam itaque sed doloribus illo libero! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium animi ratione in quibusdam nostrum, enim magnam nobis, odit eaque corporis sint nulla adipisci accusamus maxime tenetur recusandae, quisquam aut. Blanditiis.
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero repudiandae aut cumque rerum dicta eos ad, culpa aspernatur eveniet laborum tempore laudantium mollitia reprehenderit quibusdam harum natus magni. Culpa, nisi?
+          This is some text that will wrap around the floated elements. Notice how the
+          text flows around the boxes. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia similique culpa at natus sed cupiditate, soluta distinctio quae velit reiciendis suscipit dicta eos placeat, recusandae officiis ab aliquid debitis laborum.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque veritatis magni, debitis, placeat temporibus consectetur soluta, iusto expedita quidem nobis nam mollitia sapiente distinctio ullam? Ipsa voluptatum quidem illo velit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nemo sit consequuntur tenetur ad, placeat, facilis ullam, exercitationem odit temporibus quae provident labore fugit nam itaque sed doloribus illo libero! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium animi ratione in quibusdam nostrum, enim magnam nobis, odit eaque corporis sint nulla adipisci accusamus maxime tenetur recusandae, quisquam aut. Blanditiis.
+          LoThis is some text that will wrap around the floated elements. Notice how the
+          text flows around the boxes. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia similique culpa at natus sed cupiditate, soluta distinctio quae velit reiciendis suscipit dicta eos placeat, recusandae officiis ab aliquid debitis laborum.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque veritatis magni, debitis, placeat temporibus consectetur soluta, iusto expedita quidem nobis nam mollitia sapiente distinctio ullam? Ipsa voluptatum quidem illo velit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nemo sit consequuntur tenetur ad, placeat, facilis ullam, exercitationem odit temporibus quae provident labore fugit nam itaque sed doloribus illo libero! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium animi ratione in quibusdam nostrum, enim magnam nobis, odit eaque corporis sint nulla adipisci accusamus maxime tenetur recusandae, quisquam aut. Blanditiis.
+          Lo
+        </p>
+      </div>
+  </body>
+</html>

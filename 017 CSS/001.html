@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    @keyframes move-cat1{
+        0% { left:0;opacity: 1; }
+        33.33% {left:30%;  opacity: 0; }
+      66.66% {left:60%; opacity: 0; }
+      100% {left:100%; opacity: 0.5; }
+    }
+    @keyframes move-cat2{
+            0% {left:0%; opacity: 0; }
+            33.33% {left:30%; opacity: 1; }
+            66.66% {left:60%; opacity: 0.5; }
+            100% {left:100%; opacity: 0; }
+        
+    }
+    @keyframes move-cat3{
+        0% {left:0%; opacity: 0; }
+        33.33% {left:30%; opacity: 0; }
+      66.66% {left:60%; opacity: 0.5; }
+      100% {left:100%; opacity: 1; }
+    }
+
+    .cat {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: 0 0;
+      }
+       
+    .cat1{
+        background-image: url(./images/cat/1.png);
+        animation:move-cat1 2s infinite;
+        animation-direction: alternate-reverse;
+        
+      
+    }
+    .cat2{
+        background-image: url(./images/cat/2.png);
+        animation:move-cat2 2s  infinite;
+        animation-direction: alternate-reverse;
+      }
+    .cat3{
+        background-image: url(./images/cat/3.png);
+        animation:move-cat3 2s infinite;
+        animation-direction: alternate-reverse;
+      }
+    .container{
+        position: relative;
+      width: 300px;
+      height: 200px;
+        
+    }
+  </style>
+  <script></script>
+</head>
+<body>
+    <div class="container">
+    <div class="cat cat1"></div>
+    <div class="cat cat2"></div>
+    <div class="cat cat3"></div>
+    </div>
+</body>
+</html>

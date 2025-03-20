@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    .main{
+        background-color: black;
+        color:white;
+        display: flex;
+        flex-direction: column;
+        padding:10px;
+        gap:10px;
+
+        
+    }
+    header,section,aside,footer{
+        background-color: palevioletred;
+        display: flex;
+        font-size:32px;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        height:400px;
+        display: flex;
+        gap:10px;
+    }
+    section {
+        flex-grow: 1;
+    }
+
+    aside {
+        flex-basis: 250px;
+    }
+  </style>
+  <script></script>
+</head>
+<body>
+    <div class="main">
+        <header>header</header>
+        <div class="container">
+            <section>section</section>
+            <aside>aside</aside>
+        </div>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>

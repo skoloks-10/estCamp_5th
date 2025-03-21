@@ -1,235 +1,27 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <title>로그인 또는 회원가입</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
+    .spinner{
+      width:50px;height: 50px;
+      border:5px solid rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+      border-top: 5px solid #3498db;
+      animation: spin 1s linear infinite;
     }
-
-    body {
-      background-color: #f3f3f3;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+      
     }
-
-    /* 팝업 박스 컨테이너 */
-    .login-container {
-      width: 360px;
-      background-color: #fff;
-      border-radius: 6px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-      padding: 20px 24px;
-      position: relative;
-    }
-
-    /* 상단 제목 영역 */
-    .login-header {
-      text-align: center;
-      position: relative;
-      margin-bottom: 16px;
-    }
-
-    .login-header h2 {
-      font-size: 16px;
-      font-weight: 600;
-    }
-
-    /* 닫기(X) 버튼 - 예시 */
-    .close-btn {
-      position: absolute;
-      right: 0;
-      top: 0;
-      font-size: 18px;
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-
-    /* 안내 문구 */
-    .login-desc {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 14px;
-      color: #333;
-    }
-
-    /* 입력 폼 영역 */
-    .login-form {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-bottom: 16px;
-    }
-
-    .login-form input[type="text"],
-    .login-form input[type="password"] {
-      width: 100%;
-      padding: 10px 12px;
-      font-size: 14px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    /* 체크박스 영역 */
-    .checkbox-area {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 14px;
-      margin-bottom: 12px;
-      color: #555;
-    }
-
-    .checkbox-area input[type="checkbox"] {
-      width: 16px;
-      height: 16px;
-      cursor: pointer;
-    }
-
-    /* 메인 로그인 버튼 */
-    .login-btn {
-      width: 100%;
-      background-color: #4285f4;
-      border: none;
-      border-radius: 4px;
-      padding: 12px;
-      font-size: 16px;
-      color: #fff;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
-    }
-    .login-btn:hover {
-      background-color: #3874d9;
-    }
-
-    /* 회원가입 / 아이디 비밀번호 찾기 링크 영역 */
-    .sub-links {
-      text-align: center;
-      margin: 8px 0;
-      font-size: 14px;
-      color: #555;
-    }
-    .sub-links a {
-      color: #4285f4;
-      text-decoration: none;
-      margin: 0 8px;
-    }
-    .sub-links a:hover {
-      text-decoration: underline;
-    }
-
-    /* 구분선 또는 “또는” 영역 */
-    .divider {
-      text-align: center;
-      margin: 12px 0;
-      color: #999;
-      font-size: 14px;
-    }
-
-    /* 소셜 로그인 버튼 컨테이너 */
-    .social-login {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .social-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 14px;
-      padding: 10px;
-      color: #fff;
-    }
-
-    /* 각각의 브랜드 색상 예시 */
-    .google {
-      background-color: #fff;
-      border: 1px solid #ccc;
-      color: #444;
-    }
-    .facebook {
-      background-color: #3b5998;
-    }
-    .naver {
-      background-color: #1ec800;
-    }
-    .kakao {
-      background-color: #fee500;
-      color: #3c1d1e;
-    }
-
-    /* 아이콘 대체 텍스트 */
-    .icon-placeholder {
-      background: #ccc;
-      width: 16px;
-      height: 16px;
-      border-radius: 2px;
-      display: inline-block;
-    }
-
   </style>
+  <script></script>
 </head>
 <body>
-
-<div class="login-container">
-  <div class="login-header">
-    <h2>로그인 또는 회원가입</h2>
-    <button class="close-btn">✕</button>
-  </div>
-
-  <p class="login-desc">위니브에서 여러분의 궁금증을 해결하세요! :)</p>
-
-  <form class="login-form">
-    <input type="text" placeholder="아이디" />
-    <input type="password" placeholder="비밀번호" />
-  </form>
-
-  <div class="checkbox-area">
-    <input type="checkbox" id="keep-logged-in" />
-    <label for="keep-logged-in">로그인 상태 유지</label>
-  </div>
-
-  <button class="login-btn">로그인</button>
-
-  <div class="sub-links">
-    <a href="#">회원가입</a> | 
-    <a href="#">아이디/비밀번호 찾기</a>
-  </div>
-
-  <div class="divider">또는</div>
-
-  <div class="social-login">
-    <button class="social-btn google">
-      <span class="icon-placeholder"></span>
-      <img src="./Google__G__Logo 1.png" alt="">
-      구글 계정으로 로그인
-    </button>
-    <button class="social-btn facebook">
-      <span class="icon-placeholder"></span>
-      페이스북 계정으로 로그인
-    </button>
-    <button class="social-btn naver">
-      <span class="icon-placeholder"></span>
-      네이버 계정으로 로그인
-    </button>
-    <button class="social-btn kakao">
-      <span class="icon-placeholder"></span>
-      카카오톡 계정으로 로그인
-    </button>
-  </div>
-</div>
-
+  <div class="spinner"></div>
 </body>
 </html>

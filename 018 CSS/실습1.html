@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: lightgray;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      perspective: 1000px;
+    }
+    .card {
+      width: 200px;
+      height: 300px;
+      background-color: skyblue;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 1s
+    }
+    .card:active {
+      
+        transform: rotateY(180deg);
+    }
+    .front, .back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden; /* 뒷면 숨김 */
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .back {
+        background-color: skyblue;
+        transform: rotateY(180deg);
+    }
+    
+    .card img {
+        border:5px solid white;
+      width: 100%;
+      border-radius: 100px;
+    }
+    .card>.back>img{
+        border-radius: 0px;
+        
+    }
+    .card h1 {
+      font-size: 24px;
+      margin-top: 15px;
+    }
+    .card p {
+        font-size: 18px;
+      margin-top: 15px;
+    }
+    .card >.back>p{
+        font-size: 15px;
+        margin-top: 5px;
+        font-weight: bold;
+    }
+  </style>
+  <script></script>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+        <div class="front">
+            <img src="../image/Group 12.png" alt="">
+            <h1>Abc Soft</h1>
+            <p>정승훈</p>
+        </div>
+        <div class="back">
+            <img class="back-img" src="./1024px-QR_Code_Example.svg.png" alt="">
+            <p>FE Developer</p>
+            <p>D3 department</p>
+            <p>이 증을 습득하시면 010-0000-0000으로 연락주세요.</p>
+        </div>
+        
+  </div>
+</body>
+</html>

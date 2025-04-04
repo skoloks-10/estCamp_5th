@@ -2,11 +2,71 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
-    <style></style>
-    <script defer src="./script.js"></script>
+    <title>Document</title>
+    <style>
+      #app {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+        border: 1px solid #ccc;
+      }
+
+      #btn-change {
+        padding: 6px 12px;
+        border: none;
+        cursor: pointer;
+        background: white;
+        border: 2px solid black;
+        border-radius: 5px;
+
+        &:hover {
+          background: black;
+          color: white;
+        }
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div id="app">
+      <p id="color"></p>
+      <button id="btn-change">color change</button>
+    </div>
+    <script>
+      function getRandomColor() {
+        //레벨1. 랜덤 색상 생성 (rgb)
+        /*const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+        let color = `rgb(${r}, ${g}, ${b})`;
+        return color;*/
+
+        //레벨2.랜덤 색상 생성(hex)
+        const r = Math.floor(Math.random() * 256)
+          .toString(16)
+          .padStart(2, "0");
+        const g = Math.floor(Math.random() * 256)
+          .toString(16)
+          .padStart(2, "0");
+        const b = Math.floor(Math.random() * 256)
+          .toString(16)
+          .padStart(2, "0");
+        let color = `#${r}${g}${b}`;
+        return color;
+      }
+
+      const color = getRandomColor();
+      document.getElementById("app").style.backgroundColor = color;
+      document.getElementById("color").innerText = color;
+
+      const btn = document.getElementById("btn-change");
+      btn.addEventListener("click", () => {
+        const color = getRandomColor();
+        document.getElementById("app").style.backgroundColor = color;
+        document.getElementById("color").innerText = color;
+      });
+    </script>
+  </body>
 </html>

@@ -17,7 +17,7 @@ const counter = (function () {
 })();
 
 counter.getCount(); // 0
-counter.increasement(); // 16
-counter.increasement(); // 17
-counter.decreasement(); // 16
-counter.getCount(); // 166
+counter.increasement();
+counter.increasement();
+counter.decreasement();
+counter.getCount();
